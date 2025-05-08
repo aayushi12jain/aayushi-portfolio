@@ -315,6 +315,8 @@ html {
   top: 0;
   z-index: 1000;
   padding: 1rem;
+  display: flex;
+  justify-content: center;
 }
 .nav-links {
   list-style: none;
@@ -336,6 +338,47 @@ html {
   background-color: #4f46e5;
   border-radius: 6px;
 }
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-toggle {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #1f2937;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    padding: 1rem 0;
+    z-index: 999;
+  }
+
+  .nav-links.show {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block;
+  }
+
+  .nav-links li {
+    text-align: center;
+    margin: 0.5rem 0;
+  }
+}
+
 
   </style>
 
@@ -366,15 +409,18 @@ html {
   <header class="hero">
     <h1 class="hero-title">Aayushi Jain</h1>
     <p>Software Developer | Java Expert | AWS Certified</p>
-  <nav class="navbar">
-    <ul class="nav-links">
-      <li><a href="#skills">ABOUT</a></li>
-      <li><a href="#techskills">TECHNICAL SKILLS</a></li>
-      <li><a href="#experience">EXPERIENCE</a></li>
-      <li><a href="#education">EDUCATION</a></li>
-      <li><a href="#contact">CONTACT</a></li>
-    </ul>
-  </nav>
+    <nav class="navbar">
+      <div class="nav-container">
+        <span class="nav-toggle" id="navToggle">&#9776;</span>
+        <ul class="nav-links" id="navMenu">
+          <li><a href="#skills">ABOUT</a></li>
+          <li><a href="#techskills">TECHNICAL SKILLS</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#education">EDUCATION</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+    </nav>    
 </header>
   <section id="skills">
     <div class="skills-carousel">
