@@ -11,7 +11,7 @@
       margin: 0;
       padding: 0;
       line-height: 1.6;
-      background-color: #f9fafb;
+      background-color: #f4f6f8;
       color: #111827;
     }
     header {
@@ -21,14 +21,14 @@
       text-align: center;
     }
     section {
-      max-width: 800px;
+      max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
     }
     h1, h2, h3 {
       color: #111827;
     }
-    .skills, .experience, .education, .contact {
+    .education {
       margin-bottom: 2rem;
     }
     ul {
@@ -40,69 +40,611 @@
       background-color: #f3f4f6;
       font-size: 0.9rem;
     }
+
+    .skills-carousel {
+  overflow: hidden;
+  width: 100%;
+  background: #f4f6f8;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: flex;
+  width: max-content;
+  animation: scrollLeft 30s linear infinite;
+}
+
+.skill {
+  flex: 0 0 auto;
+  margin: 0 20px;
+}
+
+.skill img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+}
+
+@keyframes scrollLeft {
+  from {
+    transform: translateX(0%);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+#techskills {
+  padding: 2rem;
+  text-align: center;
+}
+
+#skills h2 {
+  color: #2a2e35;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.skill-category {
+  background: #ffffff;
+  border-left: 6px solid #1c1c1c; /* Accent border */
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+}
+
+.skill-category:hover {
+  transform: translateY(-5px);
+}
+
+.skill-category h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #1c1c1c;
+}
+
+.skill-category ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.skill-category ul li {
+  margin-bottom: 0.5rem;
+  color: #37474f;
+  padding: 4px 8px;
+  background-color: #e8eaf6;
+  border-radius: 6px;
+  display: inline-block;
+  margin-right: 5px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Overall Experience Section */
+.experience {
+  padding: 20px;
+  background-color: #f8f9fa;
+}
+
+h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #4A4A4A;
+}
+
+.experience-logo {
+  width: 100px;        /* Adjust as needed */
+  height: auto;        /* Maintain aspect ratio */
+  object-fit: contain; /* Ensures full image fits */
+  margin-right: 10px;  /* Adds spacing from text */
+  display: inline-block;
+  vertical-align: middle;
+}
+.experience-entry {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+  gap: 1rem;           /* Creates space between logo and text */
+  padding: 1rem;
+  border-radius: 10px;
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+
+.experience-logo:hover {
+  transform: scale(1.1);
+}
+
+/* Content Section (Job Description) */
+.experience-content {
+  background-color: #ffffff;
+  padding: 15px;
+  border-left: 5px solid #007BFF; /* You can change the color for each box */
+  flex: 1;
+}
+
+.experience-content h3 {
+  font-size: 1.6rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.experience-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.experience-content ul li {
+  margin-bottom: 8px;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Colors for each section */
+.experience-entry:nth-child(1) .experience-content {
+  border-left-color: #007BFF; /* Blue */
+}
+
+.experience-entry:nth-child(2) .experience-content {
+  border-left-color: #FF5733; /* Orange */
+}
+
+.experience-entry:nth-child(3) .experience-content {
+  border-left-color: #28A745; /* Green */
+}
+
+.experience-entry:nth-child(4) .experience-content {
+  border-left-color: #FFC107; /* Yellow */
+}
+
+.experience-entry:nth-child(5) .experience-content {
+  border-left-color: #6F42C1; /* Purple */
+}
+/* Custom List Style for Portfolio */
+ul.custom-list {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 0; /* Remove padding */
+  margin: 0; /* Remove any default margin */
+}
+
+ul.custom-list li {
+  position: relative; /* To position custom bullet */
+  margin-bottom: 12px; /* Space between items */
+  font-size: 1rem;
+  color: #37474f;
+  padding-left: 25px; /* Space for custom bullet */
+  text-align: justify; /* Justify the text inside each list item */
+  padding-right: 20px; /* Optional: adds some padding for a clean look */
+}
+
+ul.custom-list li::before {
+  content: ''; /* Empty content to create a bullet */
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%); /* Vertically center the bullet */
+  width: 8px;
+  height: 8px;
+  background-color: #848e99; /* Bullet color */
+  border-radius: 50%; /* Make the bullet round */
+}
+
+
+.contact {
+  background-color: #f4f6f8;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.contact h2 {
+  font-size: 2rem;
+  color: #2a2e35;
+  margin-bottom: 1.5rem;
+}
+
+.contact-info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  text-align: left;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+
+.contact-item:hover {
+  transform: translateY(-5px);
+}
+
+.contact-item i {
+  font-size: 1.8rem;
+  color: #6c63ff;
+  margin-right: 1rem;
+}
+
+.contact-item p {
+  font-size: 1rem;
+  color: #37474f;
+}
+
+.contact-item a {
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.contact-item a:hover {
+  text-decoration: underline;
+}
+
+
+
   </style>
 </head>
 <body>
   <header>
-    <h1>Aayushi Jain</h1>
-    <p>Backend Developer | Java & Kotlin Expert | AWS Certified</p>
+    <h1 style="color: white;">Aayushi Jain</h1>
+    <p>Software Developer | Java Expert | AWS Certified</p>
   </header>
+  <section id="skills">
+    <div class="skills-carousel">
+      <div class="carousel-track">
+        <!-- Duplicate icons for seamless loop -->
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"/>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="csharp"/>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+        </div>
+  
+        <!-- Repeat for smooth loop -->
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg" alt="Java" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/kotlin/kotlin-original.svg" alt="Kotlin" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" alt="JavaScript" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg" alt="AWS"/>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg" alt="csharp"/>
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg" alt="Spring" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/docker/docker-original.svg" alt="Docker" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg" alt="Git" />
+        </div>
+        <div class="skill">
+          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg" alt="MySQL" />
+        </div>
+      </div>
+    </div>
+  </section>
   <section class="about">
     <h2>About Me</h2>
-    <p>I'm a Master’s student in MIS with 6+ years of backend development experience, specializing in scalable systems using Java, Kotlin, Spring Boot, and AWS. Known for my strong problem-solving skills and leadership in Agile environments.</p>
+    <p style="text-align: justify;">
+      Hi, I’m <strong>Aayushi Jain</strong> — a passionate and results-driven Backend Developer with over 6 years of industry experience building scalable, high-performance applications. I hold a Master’s degree in Management Information Systems from the University of Houston–Clear Lake, where I deepened my expertise in data-driven technologies, cloud computing, and enterprise systems.
+    </p> 
+    <p style="text-align: justify;">
+        Throughout my career, I’ve worked at leading tech companies like Nokia, Mindtree, RxLogix, and Infosys, where I architected and delivered enterprise-grade backend solutions using Java, Kotlin, Spring Boot, and microservices. I’m AWS Certified and experienced in deploying cloud-native applications that are efficient, secure, and cost-effective. I thrive in Agile environments, collaborating closely with cross-functional teams to turn business needs into innovative technical solutions. Whether it's migrating legacy systems, optimizing system performance, or integrating modern cloud technologies, I approach every challenge with curiosity and confidence. 
+      </p>
+        <p style="text-align: justify;">
+          Currently, I’m expanding my skill set into data analytics, cloud engineering, and full-stack development, with hands-on projects in Java, REST APIs, and serverless architectures.
+    </p>
   </section>
-  <section class="skills">
+  <section id="techskills">
     <h2>Technical Skills</h2>
-    <ul>
-      <li><strong>Languages:</strong> Java, Kotlin, Python, C#, JavaScript, HTML, CSS</li>
-      <li><strong>Frameworks:</strong> Spring Boot, Hibernate, Microservices</li>
-      <li><strong>Cloud:</strong> AWS (Certified), Azure</li>
-      <li><strong>Databases:</strong> Oracle, MySQL, Data Warehouse</li>
-      <li><strong>Tools:</strong> Git, Jenkins, Maven, JIRA, Confluence, SOAPUI, FileZilla</li>
-      <li><strong>Web Services:</strong> REST, SOAP, GraphQL</li>
-    </ul>
+    <div class="skills-container">
+      <div class="skill-category">
+        <h3>Languages</h3>
+        <ul>
+          <li>Java</li>
+          <li>Kotlin</li>
+          <li>Python</li>
+          <li>C#</li>
+          <li>JavaScript</li>
+          <li>HTML</li>
+          <li>CSS</li>
+          <li>SQL</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Frameworks</h3>
+        <ul>
+          <li>Spring Boot</li>
+          <li>Hibernate</li>
+          <li>Microservices</li>
+          <li>JPA</li>
+          <li>JUnit</li>
+          <li>Mockito</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Cloud & DevOps</h3>
+        <ul>
+          <li>AWS (Certified)</li>
+          <li>Azure</li>
+          <li>Docker</li>
+          <li>Kubernetes</li>
+          <li>Jenkins</li>
+          <li>Git</li>
+          <li>Maven</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Databases</h3>
+        <ul>
+          <li>Oracle</li>
+          <li>MySQL</li>
+          <li>PostgreSQL</li>
+          <li>Data Warehouse</li>
+          <li>MongoDB</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Tools & Platforms</h3>
+        <ul>
+          <li>JIRA</li>
+          <li>Confluence</li>
+          <li>SOAPUI</li>
+          <li>FileZilla</li>
+          <li>Visual Studio Code</li>
+          <li>IntelliJ IDEA</li>
+          <li>Eclipse</li>
+        </ul>
+      </div>
+      <div class="skill-category">
+        <h3>Web Services</h3>
+        <ul>
+          <li>REST</li>
+          <li>SOAP</li>
+          <li>GraphQL</li>
+        </ul>
+      </div>
+    </div>
   </section>
+  
   <section class="experience">
     <h2>Experience</h2>
-    <h3>Student Associate III – University of Houston–Clear Lake (Jan 2024 – Present)</h3>
-    <ul>
-      <li>Provided technical support for software, hardware, and VMs.</li>
-      <li>Collaborated on system optimization and security.</li>
-    </ul>
-    <h3>Solution Specialist – Nokia (Jul 2022 – Jan 2023)</h3>
-    <ul>
-      <li>Led AEP migration project, transitioning from One-NDS to SDL.</li>
-      <li>Developed Java-based apps and integrated JSON workflows.</li>
-    </ul>
-    <h3>Module Lead – Mindtree (Apr 2021 – Jul 2022)</h3>
-    <ul>
-      <li>Led microservices development for Nokia client.</li>
-      <li>Integrated LDAP and ensured security best practices.</li>
-    </ul>
-    <h3>Software Developer – RxLogix (Sep 2020 – Mar 2021)</h3>
-    <ul>
-      <li>Built full-stack apps using Groovy and JavaScript.</li>
-      <li>Implemented Redis PubSub for real-time data handling.</li>
-    </ul>
-    <h3>Senior System Engineer – Infosys (Feb 2017 – Aug 2020)</h3>
-    <ul>
-      <li>Developed microservices and migrated legacy systems to open-source stacks.</li>
-      <li>Integrated APIs and managed deployment pipelines.</li>
-    </ul>
+    
+    <!-- University of Houston – Clear Lake -->
+    <div class="experience-entry">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/ab/UHCL_logo.jpg" alt="University of Houston" class="experience-logo" />
+      <div class="experience-content">
+        <h3>Student Associate III – University of Houston–Clear Lake (Jan 2024 – May 2025)</h3>
+        <ul class="custom-list">
+          <li>
+            Delivered hands-on technical support to over 100+ end-users, swiftly resolving complex hardware/software issues across desktops, printers, scanners, and specialized lab equipment—reducing resolution time by 30%.</li>
+          <li> 
+            Diagnosed and troubleshot system malfunctions, contributing to a 20% improvement in system uptime and performance reliability across the university’s computing infrastructure.</li>
+          <li>
+            Executed software deployments, upgrades, and environment configurations across Windows and Linux systems, ensuring seamless compatibility, security compliance, and reduced maintenance overhead.
+          </li>
+          <li>
+            Monitored and managed virtual machines (VMs) used in development and academic environments, proactively identifying performance bottlenecks and security vulnerabilities, resulting in improved system efficiency.
+          </li>
+          <li>
+            Collaborated with cross-functional IT and DevOps teams to automate support workflows and document standard operating procedures, increasing support efficiency and reducing recurring technical issues.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Nokia -->
+    <div class="experience-entry">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/0/02/Nokia_wordmark.svg" alt="Nokia" class="experience-logo" />
+      <div class="experience-content">
+        <h3>Solution Specialist – Nokia (Jul 2022 – Jan 2023)</h3>
+        <ul class="custom-list">
+          <li>Designed and engineered high-performance, scalable Java-based applications by integrating client-customized frameworks (One-NDS/SDL) and provisioning gateways, enhancing system reliability and throughput by 25%.
+          </li>
+          <li>
+            Collaborated closely with the R&D division to align architecture with cutting-edge industry standards, streamline integration processes, and ensure end-to-end system optimization.
+          </li>
+          <li>
+            Developed dynamic, responsive front-end interfaces using JavaScript, Jakarta EE, and JSP, significantly improving UI responsiveness and user engagement for internal and client-facing platforms.
+          </li>
+          <li>
+            Spearheaded the AEP Migration Project, successfully transitioning legacy systems from One-NDS to SDL; implemented streamlined JSON data processing pipelines, reducing data handling latency by 40%.
+          </li>
+          <li>
+            Led full project lifecycle—from requirements gathering and technical documentation to deployment and microservice configuration—delivering customized, client-ready solutions with minimal post-deployment support needs.
+          </li>
+          <li>
+            Ensured robust CI/CD practices and cloud-readiness of services, preparing applications for scalable deployment in production environments.
+            </li>
+          </ul>
+      </div>
+    </div>
+    
+    <!-- Mindtree -->
+    <div class="experience-entry">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9f/LTIMindtree_Logo.svg" alt="Mindtree" class="experience-logo" />
+      <div class="experience-content">
+        <h3>Module Lead – Mindtree (Apr 2021 – Jul 2022)</h3>
+        <ul class="custom-list">
+          <li>Led a high-performing Agile team, facilitating daily scrum meetings, sprint planning, and task assignments to ensure timely delivery of multiple critical modules with zero post-deployment defects.
+          </li>
+          <li>
+            Played a key role in architecting and developing microservices-based solutions in collaboration with Nokia’s engineering and product teams, ensuring scalability, resilience, and alignment with evolving business needs.
+          </li>
+          <li>
+            Acted as a primary liaison between engineering and client stakeholders, translating business requirements into innovative, production-ready software solutions that improved operational efficiency.
+          </li>
+          <li>
+            Leveraged One-NDS libraries to build custom workflows and address niche client use cases, boosting system flexibility and reducing development time by 20%.
+          </li>
+          <li>
+            Configured and seamlessly integrated LDAP systems into the project infrastructure, significantly strengthening authentication, authorization, and centralized user management capabilities.
+          </li>
+          <li>
+            Championed Agile development practices and end-to-end SDLC rigor—from requirements and design to testing and deployment—streamlining delivery pipelines and improving team velocity.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- RxLogix -->
+    <div class="experience-entry">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/Rx_symbol.svg" alt="RxLogix" class="experience-logo" />
+      <div class="experience-content">
+        <h3>Software Developer – RxLogix (Sep 2020 – Mar 2021)</h3>
+        <ul class="custom-list">
+          <li>Delivered end-to-end full-stack development using Groovy, Grails, and JavaScript, building dynamic, responsive web applications with high performance and maintainability.
+          </li>
+          <li>
+            Integrated Redis and implemented Pub/Sub services to support real-time data communication, improving system responsiveness and reducing latency in event-driven workflows.
+          </li>
+          <li>
+            Contributed to architectural design discussions, influencing core decisions that enhanced the scalability, modularity, and fault tolerance of the system.
+          </li>
+          <li>
+            Engineered and deployed custom Groovy-based plugins to meet unique client requirements, extending platform capabilities and accelerating feature delivery.
+          </li>
+          <li>
+            Collaborated in Agile development cycles, ensuring continuous integration, test-driven development, and alignment with evolving business and technical goals.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <!-- Infosys -->
+     
+    <div class="experience-entry">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg" alt="Infosys Logo" class="experience-logo" />
+      <div class="experience-content">
+        <h3>Senior System Engineer – Infosys (Feb 2017 – Aug 2020)</h3>
+        <ul class="custom-list">
+          <li>Fast-tracked from Intern to Senior System Engineer within 3.5 years, recognized through multiple awards for zero-defect deliveries, on-time execution, and high-impact feature development.
+          </li>
+          <li>
+            Designed and developed scalable, high-performance applications using Java, Spring Boot, and microservices, reducing response times by up to 40% and enabling better fault isolation and maintainability.
+          </li>
+          <li>
+            Built and integrated RESTful and SOAP services with external systems via APIGEE Gateway and IDaaS, streamlining authentication and API orchestration, resulting in a 30% reduction in integration errors.
+          </li>
+          <li>
+            Led the modernization of 10+ portal applications by migrating from IBM WebSphere to an open-source stack (Bootstrap, Angular, Tomcat), achieving a 45% reduction in hosting costs and boosting system load times by 50%.
+          </li>
+          <li>
+            Orchestrated the migration of a mission-critical application from .NET to Java, ensuring 100% feature parity, improving performance by 35%, and completing the project ahead of schedule.
+          </li>
+          <li>
+            Authored and maintained comprehensive JUnit test suites and enforced code quality practices, contributing to a 98% test coverage and helping maintain near-zero post-deployment defects.
+          </li>
+          <li>
+            Optimized backend data processing by developing advanced PL/SQL stored procedures and Oracle functions, reducing data handling times by 60% in high-volume environments.
+          </li>
+          <li>
+            Led code reviews and continuous integration workflows, introducing performance profiling techniques that reduced CPU and memory consumption across microservices by 20–25%.
+          </li>
+          <li>
+            Applied formal training in Java 8, Hibernate, Agile, and full SDLC, actively mentoring junior developers and standardizing coding best practices within the team.</li>
+        </ul>
+      </div>
+    </div>
   </section>
+  
   <section class="education">
-    <h2>Education & Certification</h2>
-    <p><strong>Master’s in MIS</strong> – University of Houston–Clear Lake (2023 – 2025)</p>
-    <p><strong>B.Tech in Bioinformatics</strong> – JUIT, India (2012 – 2016)</p>
-    <p><strong>AWS Cloud Practitioner</strong> – Certificate ID: a6a068205e084743a7f010c80e108acd</p>
+    <h2>Education & Certifications</h2>
+  
+    <!-- Master's in MIS -->
+    <div class="education-item">
+      <h3>Masters Degree in Management Information Systems (MIS)</h3>
+      <p><strong>University of Houston–Clear Lake, USA</strong> (2023 – 2025)<br>
+      <strong>Focus Areas:</strong> Web Applications Design and Development; Database Design, Development, and Administration; Business Analytics Applications Development; Computer Networks Design and Administration; Network Security; Wireless Networking; Windows Administration; Data Warehousing and Mining; Project Management; and Business Applications Programming</p>
+    </div>
+    
+  
+    <!-- B.Tech in Bioinformatics -->
+    <div class="education-item">
+      <h3>Bachelor of Technology in Bioinformatics</h3>
+      <p><strong>Jaypee University of Information Technology (JUIT), India</strong> (2012 – 2016)<br>
+      <strong>Focus Areas:</strong> Bioinformatics Algorithms and Programming; Data Analysis and Visualization; Software Development for Bioinformatics Applications; Database Design and Management; Machine Learning in Bioinformatics; Computational Biology; Systems Biology and Network Analysis; Cloud Computing in Bioinformatics; Data Mining and Bioinformatics.</p>
+    </div>
+    
+  
+    <!-- Certifications -->
+    <div class="certifications">
+      <h3>Certifications</h3>
+      <ul>
+        <li>AWS Certified – AWS Cloud Practitioner (a6a068205e084743a7f010c80e108acd) </li>
+      </ul>
+    </div>
   </section>
-  <section class="contact">
-    <h2>Contact</h2>
-    <p>Email: Aayushi12jain@gmail.com</p>
-    <p>Phone: (346) 535-2503</p>
-    <p>Location: San Ramon, CA</p>
-    <p>LinkedIn: <a href="#">Your LinkedIn Profile</a></p>
-  </section>
+  
+  <!-- Contact Section -->
+<section class="contact">
+  <h2>Contact</h2>
+  <div class="contact-info">
+    <div class="contact-item">
+      <i class="fas fa-envelope"></i>
+      <p>Email: <a href="mailto:aayushi12jain@gmail.com">Aayushi12jain@gmail.com</a></p>
+    </div>
+    <div class="contact-item">
+      <i class="fas fa-phone-alt"></i>
+      <p>Phone: <a href="tel:+13465352503">(346) 535-2503</a></p>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-linkedin"></i>
+      <p>LinkedIn: <a href="https://www.linkedin.com/in/aayushi12jain">Your LinkedIn Profile</a></p>
+    </div>
+    <div class="contact-item">
+      <i class="fab fa-github"></i>
+      <p>GitHub: <a href="https://github.com/aayushi12jain">Your GitHub Profile</a></p>
+    </div>
+  </div>
+</section>
+
+<!-- Link to FontAwesome -->
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
   <footer>
     &copy; 2025 Aayushi Jain. All rights reserved.
   </footer>
