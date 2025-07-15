@@ -472,7 +472,7 @@ html {
         <ul class="nav-links" id="navMenu">
           <li><a href="#skills">ABOUT</a></li>
           <li><a href="#techskills">TECHNICAL SKILLS</a></li>
-          <li><a href="#project">Projects</a></li>
+          <li><a href="#project">PROJECTS</a></li>
           <li><a href="#experience">EXPERIENCE</a></li>
           <li><a href="#education">EDUCATION</a></li>
           <li><a href="#contact">CONTACT</a></li>
@@ -628,25 +628,39 @@ html {
   </section>
   
  <section id="project">
-    <h2>Projects</h2>
-  <div id="kafka-project" class="project-card">
-  <img src="https://aayushi12jain.github.io/aayushi-portfolio/assets/Arch_kafka.png" alt="Kafka Project Architecture" />
-  <div class="project-content">
-    <h2>Kafka Order Inventory App</h2>
-    <p>
-      A cloud-native microservice application built using <strong>Spring Boot, Kafka, AWS RDS, and React</strong>. It simulates an order-processing pipeline that checks inventory in real-time using Kafka event streaming.
-    </p>
-    <ul>
-      <li>✅ Spring Boot microservices for Order & Inventory</li>
-      <li>✅ Kafka for event-based communication</li>
-      <li>✅ MySQL RDS for persistent storage</li>
-      <li>✅ Docker & Docker Compose setup</li>
-      <li>✅ Clean REST APIs & UI built in React</li>
-    </ul>
-    <a href="https://github.com/aayushi12jain/kafka-order-inventory-app" target="_blank" class="btn">🔗 View GitHub Repo</a>
+  <h2>Projects</h2>
+  <div id="kafka-project" class="project-card" style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: center;">
+    
+    <div style="flex: 1 1 300px; text-align: center;">
+      <img 
+        src="https://aayushi12jain.github.io/aayushi-portfolio/assets/Arch_kafka.png" 
+        alt="Kafka Project Architecture"
+        style="max-width: 100%; height: auto; border-radius: 12px;"
+      />
+    </div>
+    
+    <div class="project-content" style="flex: 1 1 400px;">
+      <h2>Kafka Order Inventory App</h2>
+      <p text-align: justify;>
+        A cloud-native microservice application built using 
+        <strong>Spring Boot, Kafka, AWS RDS, and React</strong>. 
+        It simulates an order-processing pipeline that checks inventory in real-time using Kafka event streaming.
+      </p>
+      <ul>
+        <li>✅ Spring Boot microservices for Order & Inventory</li>
+        <li>✅ Kafka for event-based communication</li>
+        <li>✅ MySQL RDS for persistent storage</li>
+        <li>✅ Docker & Docker Compose setup</li>
+        <li>✅ Clean REST APIs & UI built in React</li>
+      </ul>
+      <a href="https://github.com/aayushi12jain/kafka-order-inventory-app" target="_blank" class="btn">
+        🔗 View GitHub Repo
+      </a>
+    </div>
+
   </div>
-</div>
 </section>
+
 
 
 
